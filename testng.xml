@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParallelSuite" parallel="tests" thread-count="5">
+
+	<listeners>
+		<listener class-name="com.mystore.utility.EventListner"></listener>
+	</listeners>
+
+	 <!--
+	Test -->
+	<test name="Test2000">
+		<classes>
+			<class name="com.mystore.testcases.RegisterTest">
+		
+			</class>
+
+			<!-- <class name="com.mystore.testcases.ProductsTest"></class> -->
+		</classes>
+	</test>
+	<test name="Test1000">
+		<classes>
+			<class name="com.mystore.testcases.LoginTest" />
+			<!-- <class name="com.mystore.testcases.RegisterTest">
+		  <methods>
+			  <include name="RegisterWithExistingUser"></include>
+		  </methods>
+	  </class>-->
+
+			<!-- <class name="com.mystore.testcases.ProductsTest"></class> -->
+		</classes>
+	</test>
+</suite> <!--
+Suite -->
